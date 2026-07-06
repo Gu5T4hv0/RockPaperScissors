@@ -1,1 +1,7 @@
-console.log("aoba")
+function getComputerChoice() {
+    
+}
+
+function getHumanChoice() {
+    
+}
