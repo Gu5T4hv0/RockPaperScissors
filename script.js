@@ -22,36 +22,36 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice, humanScore, computerScore) {
 
     if (humanChoice === 1 && computerChoice === 1) {
-        return 'Tie! - Human:Rock | Computer:Rock';
+        console.log('Tie! - Human:Rock | Computer:Rock');
     } else if (humanChoice === 2 && computerChoice === 2) {
-        return 'Tie! - Human:Paper | Computer:Paper';
+        console.log('Tie! - Human:Paper | Computer:Paper');
     } else if (humanChoice === 3 && computerChoice === 3) {
-        return 'Tie! - Human:Scissors | Computer:Scissors';
+        console.log('Tie! - Human:Scissors | Computer:Scissors');
     }
     else if (humanChoice === 1 && computerChoice === 2) {
-        return 'You Lost! - Human:Rock | Computer:Paper';
+        console.log('You Lost! - Human:Rock | Computer:Paper');
         computerScore += 1;
         console.log(`Computer: ${computerScore}`);
     } else if (humanChoice === 1 && computerChoice === 3) {
-        return 'You Won! - Human:Rock | Computer:Scissors';
+        console.log('You Won! - Human:Rock | Computer:Scissors');
         humanScore += 1;
         console.log(`Human: ${humanScore}`);
     } 
     else if (humanChoice === 2 && computerChoice === 1) {
-        return 'You Won! - Human:Paper | Computer:Rock';
+        console.log('You Won! - Human:Paper | Computer:Rock');
         humanScore += 1;
         console.log(`Human: ${humanScore}`);
     } else if (humanChoice === 2 && computerChoice === 3) {
-        return 'You Lost! - Human:Paper | Computer:Scissors';
+        console.log('You Lost! - Human:Paper | Computer:Scissors');
         computerScore += 1;
         console.log(`Computer: ${computerScore}`);
     }
     else if (humanChoice === 3 && computerChoice === 1) {
-        return 'You Lost! - Human:Scissors | Computer:Rock';
+        console.log('You Lost! - Human:Scissors | Computer:Rock');
         computerScore += 1;
         console.log(`Computer: ${computerScore}`);
     } else if (humanChoice === 3 && computerChoice === 2) {
-        return 'You Won! - Human:Scissors | Computer:Paper';
+        console.log('You Won! - Human:Scissors | Computer:Paper');
         humanScore += 1;
         console.log(`Human: ${humanScore}`);
     }
