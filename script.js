@@ -1,10 +1,14 @@
-function getComputerChoice() {
-    compChoice = Math.floor(Math.random() * (1 - 3 + 1)) + 1;
-    return compChoice;
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+console.log(getRandom(1, 3));
+
+// function getComputerChoice(random) {
+//     return random;
+// }
 
 function getHumanChoice() {
-    humanChoice = prompt("Rock Paper Scissors: ");
+    const humanChoice = prompt("Rock Paper Scissors: ");
     if (humanChoice.toLowerCase() === 'rock') {
         return 1;
     } else if (humanChoice.toLowerCase() === 'paper') {
@@ -14,4 +18,12 @@ function getHumanChoice() {
     }
 }
 
-console.log(getComputerChoice());
+function game(getComputerChoice) {
+
+}
+
+// console.log(getComputerChoice());
+
+const humanScore = 0;
+const computerScore = 0;
+
