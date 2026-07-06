@@ -1,16 +1,17 @@
 function getComputerChoice() {
-    
+    compChoice = Math.floor(Math.random() * (1 - 3 + 1)) + 1;
+    return compChoice;
 }
 
 function getHumanChoice() {
-    choice = prompt("Rock Paper Scissors: ");
-    if (choice.toLowerCase() === "rock") {
+    humanChoice = prompt("Rock Paper Scissors: ");
+    if (humanChoice.toLowerCase() === 'rock') {
         return 1;
-    } else if (choice.toLowerCase() === 'paper') {
+    } else if (humanChoice.toLowerCase() === 'paper') {
         return 2;
-    } else if (choice.toLowerCase() === 'scissors') {
+    } else if (humanChoice.toLowerCase() === 'scissors') {
         return 3;
     }
 }
 
-console.log(getHumanChoice());
+console.log(getComputerChoice());
