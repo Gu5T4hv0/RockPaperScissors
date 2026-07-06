@@ -17,8 +17,8 @@ function getComputerChoice(min, max) {
 const computerChoice = getComputerChoice(1, 3);
 // console.log(computerChoice);
 
-const humanScore = 0;
-const computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === 1 && computerChoice === 1) {
         return 'Tie! - Human:Rock | Computer:Rock';
@@ -49,11 +49,13 @@ function playRound(humanChoice, computerChoice) {
         humanScore += 1;
     }
 }
-const playSelection = playRound(humanChoice, computerChoice);
+const playSelection = playRound(humanChoice, computerChoice, humanScore, computerScore);
 
 for (let i = 0; i < 5; i++) {
     function playGame(playSelection, humanScore, computerScore) {
-    console.log(`${playSelection} \n Human: ${humanScore} Computer: ${computerScore}`);
+        humanScore = 0;
+        computerScore = 0;
+        console.log(`${playSelection} \n Human: ${humanScore} Computer: ${computerScore}`);
 }
 }
-console.log(playGame());
+console.log(playGame(playSelection, humanScore, computerScore));
