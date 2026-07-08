@@ -14,6 +14,9 @@ function getComputerChoice(min, max) {
     }
 }
 
+let humanScore = 0;
+let computerScore = 0;
+
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === 'rock' && computerChoice === 'rock') {
         console.log('Tie! - Human:Rock | Computer:Rock');
@@ -44,9 +47,6 @@ function playRound(humanChoice, computerChoice) {
         console.log('You Won! - Human:Scissors | Computer:Paper');
     }
 }
-
-let humanScore = 0;
-let computerScore = 0;
 
 function playGame() {
     for (i = 0; i < 5; i++) {
