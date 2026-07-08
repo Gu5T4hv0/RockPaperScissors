@@ -22,6 +22,8 @@ function playGame(humanChoose, computerChoose) {
     let computerScore = 0;
 
     for (i = 0; i < 5; i++) {
+        getHumanChoice();
+        getComputerChoice(1, 3);
         function playRound(humanChoice, computerChoice) {
 
             if (humanChoice === 'rock' && computerChoice === 'rock') {
@@ -38,7 +40,7 @@ function playGame(humanChoose, computerChoose) {
                 humanScore += 1;
                 console.log('You Won! - Human:Rock | Computer:Scissors');
             } 
-            else if (humanChoice === 'paper' && computerChoice === 'paper') {
+            else if (humanChoice === 'paper' && computerChoice === 'rock') {
                 humanScore += 1;
                 console.log('You Won! - Human:Paper | Computer:Rock');
             } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
@@ -53,8 +55,9 @@ function playGame(humanChoose, computerChoose) {
                 console.log('You Won! - Human:Scissors | Computer:Paper');
             }
         }
+        playRound(humanChoose, computerChoose);
     }
-    playRound(humanChoose, computerChoose);
+    
     return `Human: ${humanScore} Computer: ${computerScore}`;
     
     
