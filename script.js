@@ -53,10 +53,10 @@ function playGame(humanChoose, computerChoose) {
                 console.log('You Won! - Human:Scissors | Computer:Paper');
             }
         }
-    
+    playRound(humanChoose, computerChoose);
     return `Human: ${humanScore} Computer: ${computerScore}`;
     
-    playRound(humanChoose, computerChoose);
+    
 }
 const result = playGame(humanSelection, computerSelection);
 console.log(result);
