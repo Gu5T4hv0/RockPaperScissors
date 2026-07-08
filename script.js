@@ -61,3 +61,14 @@ function playGame() {
 
 const result = playGame();
 console.log(result);
+
+function finalWinner() {
+    if (humanScore > computerScore) {
+        console.log('NOOOO, YOU WOOOONN!');
+    } else if (computerScore > humanScore){
+        console.log('MUAHAHAHA, I WON!');
+    } else {
+        console.log('Thats a Tie! Whats wrong with you?');
+    }
+}
+finalWinner();
