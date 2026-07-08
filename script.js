@@ -57,10 +57,10 @@ function playRound(humanChoice, computerChoice, humanScore, computerScore) {
     }
 }
 
-function playGame(humanScore, computerScore) {
+function playGame(humanChoice, computerChoice, humanScore, computerScore) {
     for (let i = 0; i < 5; i++) {
-        playRound(humanChoice, computerChoice);
+        playRound(humanChoice, computerChoice, humanScore, computerScore);
     }
-    console.log(`Human: ${humanScore} Computer: ${computerScore}`)
+    console.log(`Human: ${humanScore} Computer: ${computerScore}`);
 }
-playGame(humanScore, computerScore)
+playGame(humanChoice, computerChoice, humanScore, computerScore);
