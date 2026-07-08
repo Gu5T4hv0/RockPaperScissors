@@ -1,4 +1,5 @@
-function getHumanChoice() {
+function attempt() {
+    function getHumanChoice() {
     const choice = prompt("Rock Paper Scissors: ");
     if (choice.toLowerCase() === 'rock') {
         return 1;
@@ -56,11 +57,13 @@ function playRound(humanChoice, computerChoice, humanScore, computerScore) {
         console.log(`Human: ${humanScore}`);
     }
 }
+}
 
-function playGame(humanChoice, computerChoice, humanScore, computerScore) {
+
+function playGame() {
     for (let i = 0; i < 5; i++) {
-        playRound(humanChoice, computerChoice, humanScore, computerScore);
+        attempt();
     }
     console.log(`Human: ${humanScore} Computer: ${computerScore}`);
 }
-playGame(humanChoice, computerChoice, humanScore, computerScore);
+playGame();
