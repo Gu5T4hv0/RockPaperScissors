@@ -22,7 +22,7 @@ function playGame(humanChoose, computerChoose) {
     let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
-        function playRound(humanChoice, computerChoice) {
+        function playRound(humanChoice, computerChoice, humanScore, computerScore) {
 
             if (humanChoice === 'rock' && computerChoice === 'rock') {
                 console.log('Tie! - Human:Rock | Computer:Rock');
@@ -34,35 +34,36 @@ function playGame(humanChoose, computerChoose) {
             else if (humanChoice === 'rock' && computerChoice === 'paper') {
                 computerScore += 1;
                 console.log('You Lost! - Human:Rock | Computer:Paper');
-                console.log(`Computer: ${computerScore}`);
+                return computerScore;
             } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
                 humanScore += 1;
                 console.log('You Won! - Human:Rock | Computer:Scissors');
-                console.log(`Human: ${humanScore}`);
+                return humanScore;
             } 
             else if (humanChoice === 'paper' && computerChoice === 'paper') {
                 humanScore += 1;
                 console.log('You Won! - Human:Paper | Computer:Rock');
-                console.log(`Human: ${humanScore}`);
+                return humanScore;
             } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
                 computerScore += 1;
                 console.log('You Lost! - Human:Paper | Computer:Scissors');
-                console.log(`Computer: ${computerScore}`);
+                return computerScore;
             }
             else if (humanChoice === 'scissors' && computerChoice === 'rock') {
                 computerScore += 1;
                 console.log('You Lost! - Human:Scissors | Computer:Rock');
-                console.log(`Computer: ${computerScore}`);
+                return computerScore;
             } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
                 humanScore += 1;
                 console.log('You Won! - Human:Scissors | Computer:Paper');
-                console.log(`Human: ${humanScore}`);
+                return humanScore;
             }
         }
     }
     
-    playRound(humanChoose, computerChoose);
+    playRound(humanChoose, computerChoose, humanScore, computerScore);
+    console.log(`Human: ${humanScore} Computer: ${computerScore}`);
 }
-console.log(`Human: ${humanScore} Computer: ${computerScore}`);
+
 playGame(humanSelection, computerSelection)
 // console.log(playGame(humanSelection, computerSelection));
