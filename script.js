@@ -21,7 +21,7 @@ function playGame(humanChoose, computerChoose) {
     let humanScore = 0;
     let computerScore = 0;
 
-    
+    for (i = 0; i < 5; i++) {
         function playRound(humanChoice, computerChoice) {
 
             if (humanChoice === 'rock' && computerChoice === 'rock') {
@@ -53,6 +53,7 @@ function playGame(humanChoose, computerChoose) {
                 console.log('You Won! - Human:Scissors | Computer:Paper');
             }
         }
+    }
     playRound(humanChoose, computerChoose);
     return `Human: ${humanScore} Computer: ${computerScore}`;
     
